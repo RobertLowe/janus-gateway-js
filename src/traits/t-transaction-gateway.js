@@ -3,6 +3,11 @@ var JanusError = require('../error');
 var Transaction = require('../transaction');
 var Transactions = require('../transactions');
 
+// silencing forgotten returns
+Promise.config({
+  warnings: false,
+});
+
 /**
  * @class TTransactionGateway
  */

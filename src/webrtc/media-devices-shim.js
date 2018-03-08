@@ -1,6 +1,11 @@
 var Promise = require('bluebird');
 var webrtc = require('webrtc-adapter');
 
+// silencing forgotten returns
+Promise.config({
+  warnings: false,
+});
+
 function MediaDevicesShim() {
 }
 

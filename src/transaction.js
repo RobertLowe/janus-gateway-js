@@ -1,5 +1,10 @@
 var Promise = require('bluebird');
 
+// silencing forgotten returns
+Promise.config({
+  warnings: false,
+});
+
 /**
  * @callback Transaction~callback
  * @returns {Promise}

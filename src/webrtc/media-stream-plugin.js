@@ -3,6 +3,11 @@ var Helpers = require('../helpers');
 var JanusPluginMessage = require('../janus-plugin-message');
 var MediaEntityPlugin = require('./media-entity-plugin');
 
+// silencing forgotten returns
+Promise.config({
+  warnings: false,
+});
+
 function MediaStreamPlugin() {
   MediaStreamPlugin.super_.apply(this, arguments);
 }

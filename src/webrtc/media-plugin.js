@@ -4,6 +4,11 @@ var Helpers = require('../helpers');
 var Plugin = require('../plugin');
 var MediaDevicesShim = require('./media-devices-shim');
 
+// silencing forgotten returns
+Promise.config({
+  warnings: false,
+});
+
 /**
  * @inheritDoc
  *

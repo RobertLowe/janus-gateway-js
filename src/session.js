@@ -7,6 +7,11 @@ var Timer = require('./timer');
 var Transaction = require('./transaction');
 var Plugin = require('./plugin');
 
+// silencing forgotten returns
+Promise.config({
+  warnings: false,
+});
+
 /**
  * @param {Connection} connection
  * @param {string} id

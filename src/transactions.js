@@ -1,6 +1,11 @@
 var Promise = require('bluebird');
 var Transaction = require('./transaction');
 
+// silencing forgotten returns
+Promise.config({
+  warnings: false,
+});
+
 /**
  * @constructor
  */

@@ -6,6 +6,11 @@ var TTransactionGateway = require('./traits/t-transaction-gateway');
 var Transaction = require('./transaction');
 var JanusPluginMessage = require('./janus-plugin-message');
 
+// silencing forgotten returns
+Promise.config({
+  warnings: false,
+});
+
 /**
  * @param {Session} session
  * @param {string} name

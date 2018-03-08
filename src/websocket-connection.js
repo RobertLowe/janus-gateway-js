@@ -3,6 +3,11 @@ var WebSocket = require('websocket').w3cwebsocket;
 var EventEmitter = require('./event-emitter');
 var Helpers = require('./helpers');
 
+// silencing forgotten returns
+Promise.config({
+  warnings: false,
+});
+
 /**
  * @param {WebSocket} [webSocket]
  * @constructor

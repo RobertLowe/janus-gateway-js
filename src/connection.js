@@ -8,6 +8,11 @@ var WebsocketConnection = require('./websocket-connection');
 var Session = require('./session');
 var JanusMessage = require('./janus-message');
 
+// silencing forgotten returns
+Promise.config({
+  warnings: false,
+});
+
 /**
  * @param {string} id
  * @param {string} address
